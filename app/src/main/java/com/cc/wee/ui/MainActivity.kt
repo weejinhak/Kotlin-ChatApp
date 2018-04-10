@@ -1,7 +1,8 @@
-package com.cc.wee.kotlin_chatapp
+package com.cc.wee.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.cc.wee.kotlin_chatapp.R
 
 class MainActivity : AppCompatActivity() {
 
