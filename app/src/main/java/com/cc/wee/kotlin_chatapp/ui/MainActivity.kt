@@ -1,4 +1,4 @@
-package com.cc.wee.ui
+package com.cc.wee.kotlin_chatapp.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
