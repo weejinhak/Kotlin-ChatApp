@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kotlin_ChatApp</string>
+
+    <string name="login_app_name">My PT Manager</string>
+    <string name="login_app_info">운동에 관해 궁금한점 언제든지 물어보세요!</string>
+
 </resources>
