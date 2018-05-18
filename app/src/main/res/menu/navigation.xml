@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_people"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:title="@string/member" />
+
+    <item
+        android:id="@+id/navigation_chat_manager"
+        android:icon="@android:drawable/sym_action_chat"
+        android:title="@string/chat_manager" />
+
+    <item
+        android:id="@+id/navigation_my_account"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/my_account" />
+
+    <item
+        android:id="@+id/navigation_take_qrCode"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/my_qrCode" />
+    <item
+        android:id="@+id/navigation_my_qrCode"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="" />
+
+</menu>

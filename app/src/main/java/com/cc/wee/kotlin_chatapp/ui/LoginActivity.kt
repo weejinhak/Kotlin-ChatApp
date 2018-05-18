@@ -1,12 +1,12 @@
-package com.cc.wee.kotlin_chatapp.ui
+package com.cc.my_pt_manager.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.cc.wee.kotlin_chatapp.R
-import android.content.Intent
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.cc.my_pt_manager.R
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 
-/* Created by wee on 2018. 5. 12..
+/* Created by wee on 2018. 5. 2..
  */
 class LoginActivity : AppCompatActivity(),GoogleApiClient.OnConnectionFailedListener {
 
@@ -95,6 +95,8 @@ class LoginActivity : AppCompatActivity(),GoogleApiClient.OnConnectionFailedList
 
     private fun updateUI(user: FirebaseUser?) {
         Toast.makeText(this,"success",Toast.LENGTH_LONG).show()
+        val nextIntent = Intent(this, MainActivity::class.java)
+        startActivity(nextIntent)
 
     }
 
@@ -105,4 +107,3 @@ class LoginActivity : AppCompatActivity(),GoogleApiClient.OnConnectionFailedList
 
 
 }
-

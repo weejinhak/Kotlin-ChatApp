@@ -1,5 +1,6 @@
-.idea
+google-services.json
 .DS_Store
+.idea
 .idea/shelf
 /android.tests.dependencies
 /confluence/target
