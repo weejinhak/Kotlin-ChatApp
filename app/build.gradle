@@ -4,15 +4,17 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.cc.wee.kotlin_chatapp"
+        applicationId "com.cc.my_pt_manager"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -24,7 +26,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
@@ -38,25 +40,37 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     //glide
     implementation 'com.github.bumptech.glide:glide:4.7.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
     //anko
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
     implementation "org.jetbrains.anko:anko-coroutines:$anko_version"
+    //IBM Watson Chat
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.ibm.watson.developer_cloud:conversation:4.2.1'
+    implementation 'com.ibm.watson.developer_cloud:text-to-speech:4.2.1'
+    implementation 'com.ibm.watson.developer_cloud:speech-to-text:4.2.1'
+    implementation 'com.ibm.watson.developer_cloud:android-sdk:0.4.3'
+    implementation 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.+'
     //firebase
-    implementation 'com.google.firebase:firebase-core:11.8.0'
-    implementation 'com.google.firebase:firebase-database:11.8.0'
-    implementation 'com.google.firebase:firebase-storage:11.8.0'
-    implementation 'com.google.firebase:firebase-firestore:11.8.0'
-    implementation 'com.google.firebase:firebase-auth:11.8.0'
-    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-core:12.0.0'
+    implementation 'com.google.firebase:firebase-firestore:12.0.0'
+    implementation 'com.google.firebase:firebase-auth:12.0.0'
     implementation 'com.firebaseui:firebase-ui-auth:3.2.2'
+    implementation 'com.google.firebase:firebase-storage:12.0.0'
+    implementation 'com.firebaseui:firebase-ui-storage:3.2.2'
+    implementation 'com.google.android.gms:play-services-auth:12.0.0'
+    implementation 'com.google.firebase:firebase-messaging:12.0.0'
+
     //zxing
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
-
-
+    implementation 'com.github.kenglxn.QRGen:android:2.3.0'
     //multiDex
     implementation 'com.android.support:multidex:1.0.3'
+    //groupie
+    implementation 'com.xwray:groupie:2.0.3'
+    implementation 'com.xwray:groupie-kotlin-android-extensions:2.0.3'
 
 
     kotlin {
@@ -65,6 +79,10 @@ dependencies {
         }
 
     }
-}
 
+    androidExtensions {
+        experimental = true
+    }
+}
+apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'

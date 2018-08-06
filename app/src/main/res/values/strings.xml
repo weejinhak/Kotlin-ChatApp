@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">My_Pt_Manager</string>
-
+    <string name="what_s_on_your_mind">Enter your query</string>
     <string name="login_app_name">My PT Manager</string>
     <string name="login_app_info">운동에 관해 궁금한점 언제든지 물어보세요!</string>
     <string name="member">회원</string>
     <string name="chat_manager">챗매니져</string>
     <string name="my_account">나의 계정</string>
     <string name="my_qrCode">MyQR</string>
+    <string name="title_activity_chat">ChatActivity</string>
+
+    <string name="lorem_ipsum">hello</string>
+
 
 </resources>

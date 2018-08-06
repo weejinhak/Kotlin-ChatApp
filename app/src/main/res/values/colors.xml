@@ -2,8 +2,11 @@
 <resources>
     <color name="colorPrimary">#3A88D6</color>
     <color name="colorPrimaryDark">#3A88D6</color>
-    <color name="colorAccent">#FF4081</color>
-
+    <color name="colorAccent">#7CD0D5</color>
+    <color name="bg_bubble_self">#62caa6</color>
+    <color name="bg_bubble_watbot">#ecf0f1</color>
     <color name="app_color">#3A88D6</color>
+
+    <color name="my_text_color">#8FCEFF</color>
 
 </resources>
